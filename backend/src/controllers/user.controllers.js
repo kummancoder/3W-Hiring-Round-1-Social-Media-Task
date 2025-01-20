@@ -9,18 +9,18 @@ export const submitDetails = async (req, res) => {
     }
 
     const { name, socialMediaHandle } = req.body;
-    console.log(req.files);
+    // console.log(req.files);
     const images = req.files.map((file) => file.path);
     const invalidFiles = req.files.filter(
       (file) => !file?.mimetype || !file?.mimetype?.startsWith("image/")
     );
-
+    // console.log("images" + images);
     if (invalidFiles.length > 0) {
       return res
         .status(400)
         .json({ message: "Invalid file type, only images are allowed" });
     }
-
+    // console.log("cloud");
     const imageUploadPromises = images.map((imagePath) =>
       uploadOnCloudinary(imagePath)
     );
@@ -29,6 +29,7 @@ export const submitDetails = async (req, res) => {
     const imageUrls = uploadedImages.map(
       (cloudResponse) => cloudResponse?.secure_url
     );
+    // console.log("cloud" + imageUrls);
 
     const user = new User({
       name,
