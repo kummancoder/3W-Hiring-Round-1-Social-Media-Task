@@ -27,7 +27,7 @@ export const submitDetails = async (req, res) => {
 
     const uploadedImages = await Promise.all(imageUploadPromises);
     const imageUrls = uploadedImages.map(
-      (cloudResponse) => cloudResponse.secure_url
+      (cloudResponse) => cloudResponse?.secure_url
     );
 
     const user = new User({

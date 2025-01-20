@@ -6,17 +6,17 @@ import Dashboard from "./components/Dashboard";
 
 const App = () => {
   return (
-    
-      <div>
+    <div className="w-full bg-[#FCFCFC] h-screen">
+      <div className="w-full shadow-md">
         <Navbar />
-
-        <Routes>
-          <Route path="/" element={<UserForm />} />{" "}
-          <Route path="/upload" element={<UserForm />} />{" "}
-          <Route path="/dashboard" element={<Dashboard />} />{" "}
-        </Routes>
       </div>
-   
+
+      <Routes>
+        <Route path="/" element={<UserForm />} />{" "}
+        <Route path="/upload" element={<UserForm />} />{" "}
+        <Route path="/dashboard" element={<Dashboard />} />{" "}
+      </Routes>
+    </div>
   );
 };
 
