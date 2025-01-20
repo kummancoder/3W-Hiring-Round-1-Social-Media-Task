@@ -35,7 +35,7 @@ const UserForm = () => {
       setUploadStatus("Uploading...");
 
       const response = await axios.post(
-        "http://localhost:8000/upload",
+        "http://localhost:8000/api/user//submitDetails",
         formData,
         {
           headers: {

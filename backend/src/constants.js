@@ -1,1 +1,1 @@
-export const DB_NAME = "3W_Database";
+export const DB_NAME = "assessment";
