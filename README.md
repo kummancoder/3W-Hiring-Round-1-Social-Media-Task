@@ -27,7 +27,7 @@ This project was developed as part of the hiring process for 3W, specifically fo
 
 - **Frontend**: React.js
 - **Backend**: Node.js with Express
-- **Database**: MongoDB (or any database of your choice for managing user submissions and photos)
+- **Database**: MongoDB ans cloudinary (or any database of your choice for managing user submissions and photos)
 - **Styling**: Tailwind CSS
 - **Deployment**: Hosted on Netlify.
 
